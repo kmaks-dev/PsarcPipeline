@@ -12,9 +12,17 @@ $RelativePaths = @{
     SourceStage1 = 'Source\Stage1'
     SourceStage2 = 'Source\Stage2'
     Tools        = 'Tools'
-    ToolsPacker  = 'Tools\RocksmithToolkit\RocksmithToolkit\packer.exe'
-    Tools7Zip    = 'Tools\7zip\7zr.exe'
 }
+
+# Create directories if they do not exist
+foreach ($Key in $RelativePaths.Keys) {
+    $DirPath = Join-Path -Path $RootPath -ChildPath $RelativePaths.$Key
+    New-Item -ItemType 'Directory' -Path $DirPath -ErrorAction SilentlyContinue
+}
+
+# Define tool paths
+$RelativePaths.ToolsPacker  = 'Tools\RocksmithToolkit\RocksmithToolkit\packer.exe'
+$RelativePaths.Tools7Zip = 'Tools\7zip\7zr.exe'
 
 # Construct full paths
 $FullPaths = @{}
