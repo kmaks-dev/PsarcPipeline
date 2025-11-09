@@ -1,0 +1,93 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🛠️ Tools",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}/Scripts/Initialize-Tools.ps1"
+            ],
+            "presentation": {
+                "echo": false,
+                // "reveal": "never",
+                "focus": false,
+                // "panel": "shared"
+            },
+        },
+        {
+            "label": "🧹 Clear",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}/Scripts/Clear-Environment.ps1"
+            ],
+            "presentation": {
+                "echo": false,
+                // "reveal": "never",
+                "focus": false,
+                // "panel": "shared"
+            },
+        },
+        {
+            "label": "📂 Expand",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}/Scripts/Expand-Psarc.ps1"
+            ],
+            "presentation": {
+                "echo": false,
+                // "reveal": "never",
+                "focus": false,
+                // "panel": "shared"
+            },
+        },
+        {
+            "label": "📦 Compress",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}/Scripts/Compress-Psarc.ps1"
+            ],
+            "presentation": {
+                "echo": false,
+                // "reveal": "never",
+                "focus": false,
+                // "panel": "shared"
+            },
+        },
+        {
+            "label": "🚀 Deploy",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}/Scripts/Deploy-Psarc.ps1"
+            ],
+            "presentation": {
+                "echo": false,
+                // "reveal": "never",
+                "focus": false,
+                // "panel": "shared"
+            },
+        },
+        {
+            "label": "▶️ Start Rocksmith",
+            "type": "shell",
+            "command": "start steam://rungameid/221680",
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared"
+            },
+        }
+    ]
+}

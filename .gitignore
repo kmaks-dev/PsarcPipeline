@@ -1,0 +1,13 @@
+# Ignore build outputs and intermediate files
+Input/
+
+# Ignore stage outputs
+Output/
+
+# This file gets modified each time a Compress task occurs
+# but there is no point in tracking it's changes
+Source/Stage1/*/gamexblocks/guitarcade/*.7z
+
+# Tools are not embeded in the pipeline, and are supposed
+# to be updated
+Tools/
